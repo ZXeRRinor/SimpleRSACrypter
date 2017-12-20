@@ -242,7 +242,7 @@ module RSACryptable #module_for_String
     return result % @decrypt_key[0]
   end
 
-  def prep_2_way
+  def rsa_decrypt
     split_size = 3 #need to create autodetection of size of grammes (split_size)
     decrypted = self.to_number(split_size).map do |elem|
       #p elem
@@ -261,7 +261,7 @@ module RSACryptable #module_for_String
     return decrypted.join
   end
 
-  def rsa_decrypt(p, q, e) #approximately useless...
+  def rsa_decrypt_uw(p, q, e) #approximately useless...
     self.set_code_table
     self.generate_keys(p, q, e)
     d = @decrypt_key[1]
@@ -320,7 +320,7 @@ str.generate_keys(61, 47, 29)
 #str = 'я учу дискретную математику'
 #r = 'ауахтацёамааодажсакчалтадхаёёаёсаёёаоэажс'
 #str = gets().chomp!
-p str.prep_2_way
+p str.decrypt
 #p str.split_by(3)
 #r = 'дмитрий'
 puts '  b'

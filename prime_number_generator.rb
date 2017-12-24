@@ -13,7 +13,10 @@ def prime_numbers(lim)
         nums[x] = false
       end
     end
+    i = 1
     until nums[last_num + 2 * i]
+      p nums[last_num + 2 * i]
+      p last_num
       last_num += 1
     end
   end
@@ -23,7 +26,7 @@ end
 prime_numbers(30).each_with_index do |elem, key|
   #p elem
   #p key
-  if elem
+  if !elem
     p key
   end
 end

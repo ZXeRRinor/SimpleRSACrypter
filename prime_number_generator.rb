@@ -6,4 +6,18 @@ module PrimeNumberProcessor
     end
     nums
   end
+
+  def is_prime?(num)
+    i = 2
+    flag = true
+    while i < (num / 2)
+      if num % i == 0
+        flag = false
+        puts(i)
+        break
+      end
+      i += 1
+    end
+    flag
+  end
 end

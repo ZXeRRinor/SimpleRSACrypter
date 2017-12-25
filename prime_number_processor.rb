@@ -1,5 +1,5 @@
 module PrimeNumberProcessor
-  def prime_numbers_generator(from = 2,to)
+  def prime_numbers_generator(from = 2, to)
     nums = (2..to).to_a #preparing
     nums = nums.partition() {|num| num % 2 == 0}[1]
     nums.each do |elem|

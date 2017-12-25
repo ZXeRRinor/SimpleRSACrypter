@@ -208,7 +208,9 @@ module RSACryptable #module_for_String
     end
     #p decrypted
     return decrypted #.join
-  end #approximately useless...
+  end
+
+  #approximately useless...
 
   def generate_keys(p, q, e)
     @encrypt_key = Encrypt_key.new(p, q, e).to_a
